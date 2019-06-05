@@ -57,6 +57,7 @@ table {
 @top-half-padding: 40px;
 @lower-upper-top-padding: 40px;
 @under-subtitle-padding: 10px;
+@small-subtitle-size: 1.3rem;
 
 /* Mixins */
 .top-half-padding {
@@ -145,6 +146,7 @@ section.lower-upper-container {
 	h2 {
 		font-size: 1.5rem;
 		.subtitle-padding();
+		font-weight: bold;
 	}
 
 	p {
@@ -153,13 +155,58 @@ section.lower-upper-container {
 	}
 
 	h3 {
-		font-size: 1.3rem;
+		font-size: @small-subtitle-size;
 		.subtitle-padding();
+		font-weight: bold;
 	}
 
 	li {
 		border: 1px solid lightgrey;
 		font-size: 1.2rem;
 		padding: 15px;
+	}
+}
+
+section.lower-lower {
+
+	padding-bottom: 30px;
+
+
+	h3 {
+		font-size: @small-subtitle-size;
+		.subtitle-padding();	
+		font-weight: bold;
+	}
+
+	th {
+		border-top: 1px solid lightgrey;
+		border-bottom: 1px solid lightgrey;
+		font-size: 1rem;
+		padding: 15px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	td {
+		border-top: 1px solid lightgrey;
+		border-bottom: 1px solid lightgrey;
+		font-size: 1rem;
+		padding: 15px;
+	}
+
+	tr.gray-background {
+		background-color:#f2f2f2;
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: #808080;
+
+	p {
+		padding-top: 30px;
+		padding-bottom: 50px;
+		color: white;
 	}
 }
