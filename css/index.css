@@ -166,10 +166,12 @@ header nav a {
 }
 section.top-half {
   background-color: #E8ECEF;
-  height: 600px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 section.top-half img {
   margin-left: 40px;
@@ -204,6 +206,9 @@ section.lower-upper-container {
 }
 section.lower-upper-container .lower-upper {
   width: 50%;
+}
+section.lower-upper-container .lower-upper p {
+  font-size: 1.2rem;
 }
 section.lower-upper-container h2 {
   font-size: 1.5rem;
