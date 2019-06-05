@@ -195,3 +195,6 @@ section.top-half button {
   height: 40px;
   width: 120px;
 }
+section.lower-upper {
+  display: flex;
+}
