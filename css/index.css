@@ -222,8 +222,10 @@ body {
 .container section.top-half button {
   margin-left: 40px;
   margin-right: 40px;
-  height: 40px;
-  width: 120px;
+  height: 60px;
+  width: 220px;
+  font-size: 1rem;
+  border: 1px solid gray;
 }
 .container section.lower-upper-container {
   display: flex;
