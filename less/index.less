@@ -52,9 +52,78 @@ table {
 * {
     box-sizing: border-box;
 }
+/* variables */
+@header-padding: 20px;
+@top-half-padding: 40px;
 
-html, body {
-	height: 100%;
-	
+/* Mixins */
+.top-half-padding {
+	margin-left: @top-half-padding;
+	margin-right: @top-half-padding;
 }
 
+html, body {
+	height: 100%;	
+}
+
+.container {
+	max-width: 850px;
+	margin: 0 auto;
+	// font-size: 1.3rem;
+  }
+
+header {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: @header-padding;
+	padding-bottom: @header-padding;
+
+	nav {
+		width: 33%;
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			text-decoration: none;
+			font-size: 1rem;
+			color: black;
+		}
+	}
+}
+
+section.top-half {
+	background-color: #E8ECEF;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	img {
+		.top-half-padding();
+		height: 300px;
+		width: 300px;
+	}
+
+	h1 {
+		.top-half-padding();
+		font-size: 3rem;
+	}
+
+	p {
+		.top-half-padding();
+	}
+
+	.tagline {
+		font-size: 1.5rem;
+	}
+
+	hr {
+		.top-half-padding();
+	}
+
+	button {
+		.top-half-padding();
+		height: 40px;
+		width: 120px;
+	}
+}
