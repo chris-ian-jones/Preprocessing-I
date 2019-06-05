@@ -8,13 +8,15 @@
 
   <link rel="stylesheet" href="css/index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
+    <script>
+        var themeSong = new Audio("/the-addams-family-intro-theme-song.mp3"); 
+    </script>
   <div class="container home">
     <header>
       <nav>
@@ -30,7 +32,7 @@
         <p class="tagline">Patriarch of the Addams Family</p>
         <hr>
         <p>Father of Pugsley, Wednesday and Pubert Addams. Husband of Morticia Addams, brother of Fester Addams, all of whom I love far more than anything else in life.</p>
-        <button>Lets Team Up</button>
+        <button onclick="themeSong.play()">Creepy and Kooky</button>
     </section>
     <section class="lower-upper-container">
       <section class="lower-upper left">
