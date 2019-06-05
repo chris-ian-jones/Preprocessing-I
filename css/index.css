@@ -136,6 +136,10 @@ table {
   margin-left: 40px;
   margin-right: 40px;
 }
+.subtitle-padding {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
 html,
 body {
   height: 100%;
@@ -183,7 +187,7 @@ section.top-half p {
   margin-right: 40px;
 }
 section.top-half .tagline {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 section.top-half hr {
   margin-left: 40px;
@@ -195,6 +199,28 @@ section.top-half button {
   height: 40px;
   width: 120px;
 }
-section.lower-upper {
+section.lower-upper-container {
   display: flex;
+}
+section.lower-upper-container .lower-upper {
+  width: 50%;
+}
+section.lower-upper-container h2 {
+  font-size: 1.5rem;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+section.lower-upper-container p {
+  padding-right: 20px;
+  line-height: 1.5;
+}
+section.lower-upper-container h3 {
+  font-size: 1.3rem;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+section.lower-upper-container li {
+  border: 1px solid lightgrey;
+  font-size: 1.2rem;
+  padding: 15px;
 }

@@ -55,11 +55,18 @@ table {
 /* variables */
 @header-padding: 20px;
 @top-half-padding: 40px;
+@lower-upper-top-padding: 40px;
+@under-subtitle-padding: 10px;
 
 /* Mixins */
 .top-half-padding {
 	margin-left: @top-half-padding;
 	margin-right: @top-half-padding;
+}
+
+.subtitle-padding {
+	padding-top: @lower-upper-top-padding;
+	padding-bottom: @under-subtitle-padding;
 }
 
 html, body {
@@ -114,7 +121,7 @@ section.top-half {
 	}
 
 	.tagline {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 
 	hr {
@@ -128,6 +135,31 @@ section.top-half {
 	}
 }
 
-section.lower-upper {
+section.lower-upper-container {
 	display: flex;
+
+	.lower-upper {
+		width: 50%;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		.subtitle-padding();
+	}
+
+	p {
+		padding-right: 20px;
+		line-height: 1.5;
+	}
+
+	h3 {
+		font-size: 1.3rem;
+		.subtitle-padding();
+	}
+
+	li {
+		border: 1px solid lightgrey;
+		font-size: 1.2rem;
+		padding: 15px;
+	}
 }
