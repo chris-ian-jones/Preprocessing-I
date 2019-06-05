@@ -148,23 +148,39 @@ body {
   max-width: 850px;
   margin: 0 auto;
 }
-header {
+.container header {
   display: flex;
   justify-content: flex-end;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-header nav {
+.container header nav {
   width: 33%;
   display: flex;
   justify-content: space-between;
 }
-header nav a {
+@media (max-width: 500px) {
+  .container header nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container header nav a {
   text-decoration: none;
   font-size: 1rem;
   color: black;
 }
-section.top-half {
+@media (max-width: 500px) {
+  .container header nav a {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.container section.top-half {
   background-color: #E8ECEF;
   height: 700px;
   display: flex;
@@ -173,74 +189,95 @@ section.top-half {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-section.top-half img {
+@media (max-width: 500px) {
+  .container section.top-half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container section.top-half img {
   margin-left: 40px;
   margin-right: 40px;
   height: 300px;
   width: 300px;
 }
-section.top-half h1 {
+.container section.top-half h1 {
   margin-left: 40px;
   margin-right: 40px;
   font-size: 3rem;
 }
-section.top-half p {
+.container section.top-half p {
   margin-left: 40px;
   margin-right: 40px;
+  line-height: 1.3;
 }
-section.top-half .tagline {
+.container section.top-half .tagline {
   font-size: 1.2rem;
 }
-section.top-half hr {
+.container section.top-half hr {
   margin-left: 40px;
   margin-right: 40px;
 }
-section.top-half button {
+.container section.top-half button {
   margin-left: 40px;
   margin-right: 40px;
   height: 40px;
   width: 120px;
 }
-section.lower-upper-container {
+.container section.lower-upper-container {
   display: flex;
 }
-section.lower-upper-container .lower-upper {
+@media (max-width: 500px) {
+  .container section.lower-upper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container section.lower-upper-container .lower-upper {
   width: 50%;
 }
-section.lower-upper-container .lower-upper p {
+.container section.lower-upper-container .lower-upper p {
   font-size: 1.2rem;
 }
-section.lower-upper-container h2 {
+.container section.lower-upper-container h2 {
   font-size: 1.5rem;
   padding-top: 40px;
   padding-bottom: 10px;
   font-weight: bold;
 }
-section.lower-upper-container p {
+.container section.lower-upper-container p {
   padding-right: 20px;
   line-height: 1.5;
 }
-section.lower-upper-container h3 {
+.container section.lower-upper-container h3 {
   font-size: 1.3rem;
   padding-top: 40px;
   padding-bottom: 10px;
   font-weight: bold;
 }
-section.lower-upper-container li {
+.container section.lower-upper-container li {
   border: 1px solid lightgrey;
   font-size: 1.2rem;
   padding: 15px;
 }
-section.lower-lower {
+.container section.lower-lower {
   padding-bottom: 30px;
 }
-section.lower-lower h3 {
+@media (max-width: 500px) {
+  .container section.lower-lower {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+.container section.lower-lower h3 {
   font-size: 1.3rem;
   padding-top: 40px;
   padding-bottom: 10px;
   font-weight: bold;
 }
-section.lower-lower th {
+.container section.lower-lower th {
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   font-size: 1rem;
@@ -248,22 +285,24 @@ section.lower-lower th {
   font-weight: bold;
   text-align: left;
 }
-section.lower-lower td {
+.container section.lower-lower td {
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   font-size: 1rem;
   padding: 15px;
 }
-section.lower-lower tr.gray-background {
+.container section.lower-lower tr.gray-background {
   background-color: #f2f2f2;
 }
-footer {
+.container footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #808080;
-}
-footer p {
   padding-top: 30px;
   padding-bottom: 50px;
+}
+.container footer p {
+  padding-top: 10px;
   color: white;
 }
