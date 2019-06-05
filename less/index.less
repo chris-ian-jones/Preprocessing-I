@@ -58,6 +58,8 @@ table {
 @lower-upper-top-padding: 40px;
 @under-subtitle-padding: 10px;
 @small-subtitle-size: 1.3rem;
+@border: 1px solid lightgrey;
+/* --- */
 
 /* Mixins */
 .top-half-padding {
@@ -69,6 +71,12 @@ table {
 	padding-top: @lower-upper-top-padding;
 	padding-bottom: @under-subtitle-padding;
 }
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+/* --- */
 
 html, body {
 	height: 100%;	
@@ -113,15 +121,13 @@ html, body {
 	section.top-half {
 		background-color: #E8ECEF;
 		height: 700px;
-		display: flex;
-		flex-direction: column;
+		.flex-column();
 		justify-content: space-around;
 		padding-top: 30px;
 		padding-bottom: 30px;
 
 		@media (max-width: 500px) {
-			display: flex;
-			flex-direction: column;
+			.flex-column();
 			align-items: center;
 		  }
 
@@ -154,7 +160,7 @@ html, body {
 			height: 60px;
 			width: 220px;
 			font-size: 1rem;
-			border: 1px solid gray;
+			border: @border;
 		}
 	}
 
@@ -162,8 +168,7 @@ html, body {
 		display: flex;
 
 		@media (max-width: 500px) {
-			display: flex;
-			flex-direction: column;
+			.flex-column();
 			align-items: center;
 		  }
 
@@ -207,7 +212,10 @@ html, body {
 			.top-half-padding();
 		  }
 
-
+		table {
+			width:100%;
+		}
+		
 		h3 {
 			font-size: @small-subtitle-size;
 			.subtitle-padding();	
@@ -215,8 +223,8 @@ html, body {
 		}
 
 		th {
-			border-top: 1px solid lightgrey;
-			border-bottom: 1px solid lightgrey;
+			border-top: @border;
+			border-bottom: @border;
 			font-size: 1rem;
 			padding: 15px;
 			font-weight: bold;
@@ -224,8 +232,8 @@ html, body {
 		}
 
 		td {
-			border-top: 1px solid lightgrey;
-			border-bottom: 1px solid lightgrey;
+			border-top: @border;
+			border-bottom: @border;
 			font-size: 1rem;
 			padding: 15px;
 		}
@@ -236,8 +244,7 @@ html, body {
 	}
 
 	footer {
-		display: flex;
-		flex-direction: column;
+		.flex-column();
 		align-items: center;
 		background-color: #808080;
 		padding-top: 30px;

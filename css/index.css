@@ -131,6 +131,7 @@ table {
   box-sizing: border-box;
 }
 /* variables */
+/* --- */
 /* Mixins */
 .top-half-padding {
   margin-left: 40px;
@@ -140,6 +141,11 @@ table {
   padding-top: 40px;
   padding-bottom: 10px;
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+/* --- */
 html,
 body {
   height: 100%;
@@ -225,7 +231,7 @@ body {
   height: 60px;
   width: 220px;
   font-size: 1rem;
-  border: 1px solid gray;
+  border: 1px solid lightgrey;
 }
 .container section.lower-upper-container {
   display: flex;
@@ -272,6 +278,9 @@ body {
     margin-left: 40px;
     margin-right: 40px;
   }
+}
+.container section.lower-lower table {
+  width: 100%;
 }
 .container section.lower-lower h3 {
   font-size: 1.3rem;
